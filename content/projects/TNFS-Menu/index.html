@@ -1,0 +1,19 @@
+<p>
+TNFS Menu for Fujinet is a firmware patch to add gopher-like menu functionality to the disk image browser present on all FujiNet config applications. Like Gopher menus, TNFS menus are line based, with each line defining the type and value of a menu resource. What kind of menu resources? The kind that are supported by FujiNet today: folders, binaries, and links. 
+<p>
+This patch is compatible with existing config applications, regardless of platform. Additional functionality could be added by adding support in the config app - things like extended menu type info to distinguish between text content and binaries.
+<p>
+To add a menu to your site, place a file called "tnfs.menu" in your directory and populate it with content. When menu-enabled firmware encounters a tnfs.menu file, it displays the content of the file instead of the directory contents. You can add entries for your folders, links, and files contained in the directory, or you can omit them. Only what is in the file be shown by the image browser.
+<p>
+Line Format: [-&lt;type&gt; ]&lt;value&gt;
+<p>
+    &lt;type&gt;   : Optional. Number value indicating the menu item type. If the type field is not present, the type is assumed to be type 0 text content.<br>
+    &lt;value&gt;  : String value of the resource to be accessed by the disk image browser.<br>
+<p>
+Item types supported:
+<p>
+    0 : Line of plain text.<br>
+    1 : File folder in the current path. The name must match the name of the folder on disk.<br>
+    2 : Binary/Disk image in the current path. The name must match the name of the file on disk.<br>
+    3 : TNFS host link. For backwards confi gcompatibility a + will be prepended.<br>
+</p>

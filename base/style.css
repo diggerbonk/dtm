@@ -64,6 +64,14 @@ blockquote {
     display: flex;
 }
 
+.heading {
+}
+
+.heading h1 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
 
 .menubar {
     grid-column: 1;

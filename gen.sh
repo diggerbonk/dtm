@@ -45,7 +45,7 @@ do
         cat include/header1.html | sed "s/__DOCROOT__/${DOCROOTR}/g"  > "${DESTDIR}/${newdir}/index.html"
         echo "<title>${atitle/-/ }</title>" >> "${DESTDIR}/${newdir}/index.html"
         cat include/header2.html | sed "s/__DOCROOT__/${DOCROOTR}/g" >> "${DESTDIR}/${newdir}/index.html"
-        echo "<h1>${atitle/-/ }</h1>" >> "${DESTDIR}/${newdir}/index.html"
+        echo "<div class=\"heading\"><h1>${atitle/-/ }</h1></div>" >> "${DESTDIR}/${newdir}/index.html"
         echo "<small>${wdate}</small>" >> "${DESTDIR}/${newdir}/index.html"
         cat "${dir}/index.html" >> "${DESTDIR}/${newdir}/index.html"
         cat include/footer.html >> "${DESTDIR}/${newdir}/index.html"
@@ -64,8 +64,6 @@ cat include/header1.html |  sed "s/__DOCROOT__/${DOCROOTR}/g" > ${DESTDIR}/every
 cat include/header2.html |  sed "s/__DOCROOT__/${DOCROOTR}/g" >> ${DESTDIR}/everything.html
 cat base/everything.html >> ${DESTDIR}/everything.html
 cat include/footer.html >> ${DESTDIR}/everything.html
-
-
 
 cd ./staging
 tar czvf site.tar.gz ./${DOCROOT}
