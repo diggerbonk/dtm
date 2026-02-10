@@ -1,3 +1,9 @@
+# Structure
+
+YYYY/MM/DD/Title/...
+
+
+
 # tvi910
 
 To get the size of an image:
