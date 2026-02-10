@@ -21,6 +21,22 @@ body {
     filter: grayscale(1);
 }
 
+.content figure {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border: 0;
+}
+
+.content figure img {
+    width: 100%;
+}
+
+.content figcaption {
+    text-align: center;
+}
+
 .icon {
     width: 1em;
 }

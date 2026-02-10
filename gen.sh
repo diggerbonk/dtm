@@ -43,9 +43,9 @@ do
 
         # build the index file
         cat include/header1.html | sed "s/__DOCROOT__/${DOCROOTR}/g"  > "${DESTDIR}/${newdir}/index.html"
-        echo "<title>${atitle/-/ }</title>" >> "${DESTDIR}/${newdir}/index.html"
+        echo "<title>${atitle//-/ }</title>" >> "${DESTDIR}/${newdir}/index.html"
         cat include/header2.html | sed "s/__DOCROOT__/${DOCROOTR}/g" >> "${DESTDIR}/${newdir}/index.html"
-        echo "<div class=\"heading\"><h1>${atitle/-/ }</h1>" >> "${DESTDIR}/${newdir}/index.html"
+        echo "<div class=\"heading\"><h1>${atitle//-/ }</h1>" >> "${DESTDIR}/${newdir}/index.html"
         echo "<small>${wdate}</small></div>" >> "${DESTDIR}/${newdir}/index.html"
         cat "${dir}/index.html" >> "${DESTDIR}/${newdir}/index.html"
         cat include/footer.html >> "${DESTDIR}/${newdir}/index.html"
