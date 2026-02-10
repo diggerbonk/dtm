@@ -13,7 +13,7 @@ body {
     justify-content: center; 
 }
 
-img {
+.content img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -54,14 +54,20 @@ blockquote {
     grid-column: 1; 
     grid-row: 1 ;
     padding: .1rem ; 
-    padding-top: 1.0rem;
-    padding-bottom: 1.0rem;
-    padding-left: 1.0rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
     color: #333333;
     background: white;
     font-size: 1.8rem;
     font-weight: 600;
     display: flex;
+}
+
+.title img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+/*    filter: grayscale(1); */
 }
 
 .heading {
@@ -72,19 +78,24 @@ blockquote {
     margin-bottom: 0;
 }
 
+.heading small {
+    margin-top: 0;
+    padding-top: 0;
+}
 
 .menubar {
     grid-column: 1;
     grid-row: 2;
-    padding: .1rem;
+    padding: .2rem;
     color: #333333;
     background: #eeeeee;
-    border-top-style: solid; 
+/*    border-top-style: solid;  */
 /*    border-bottom-style: solid; */
     font-size: 1.2rem;
     /* white-space: pre-wrap; */
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
 }
 
@@ -92,7 +103,8 @@ blockquote {
 }
 
 .socials  {
-    padding: .1rem;
+    align-items: center;
+    padding: .2rem;
 }
 
 .socials img {
@@ -107,6 +119,19 @@ blockquote {
     justify-self: left;
     font-size: 1.2rem;
     overflow-wrap: break-word;
+}
+
+.content table {
+    width: 80%;
+}
+
+.content table, th, td {
+  /* Apply a 1px solid border with a light grey color */
+  border: 1px solid #ddd; 
+  /* Optional: Add padding for readability */
+  padding: 0px;
+  /* Optional: Align text to the left */
+  text-align: left;
 }
 
 .footer {
